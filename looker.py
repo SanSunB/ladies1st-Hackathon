@@ -36,4 +36,14 @@ class Looker(Worker):
         if self.courses is worker.courses:
             score = score + 1
         return score
+    
+        def get_similar_lookers(self, file):
+        f = open(file, "r")
+        lookers = []
+        for x in f:
+            looker = x.split("|")
+            if self.wanted_job is looker[1]:
+                lookers.append(Worker(looker[0], looker[1], looker[2], looker[3], looker[4]))
+        f.close()
+        return lookers
 
