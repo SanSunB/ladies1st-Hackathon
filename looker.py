@@ -3,12 +3,12 @@ from worker import Worker
 
 class Looker(Worker):
     """ """
-    def __init__(self, wanted_job, industry=None):
+    def __init__(self, wanted_job,current_job=None, prev_job=None, degree=None):
         """ """
+        super().__init__(current_job, prev_job, degree)
         self.wanted_job = wanted_job
-        self.industry = industry
 
-     def get_similar_workers(self, file):
+    def get_similar_workers(self, file):
         f = open(file, "r")
         workers = []
         for x in f:

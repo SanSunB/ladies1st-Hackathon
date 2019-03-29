@@ -6,12 +6,14 @@ class Worker:
     def __init__(self):
         """ """
         self.id_number = None
+        self.wanted_job = None
         self.current_job = None
         self.prev_job = None
         self.degree = None
 
-    def __init__(self,current_job, prev_job, degree):
+    def __init__(self,wanted_job=None, current_job=None, prev_job=None, degree=None):
         self.id_number = self.create_id()
+        self.wanted_job = wanted_job
         self.current_job = current_job
         self.prev_job = prev_job
         self.degree = degree
@@ -57,3 +59,36 @@ class Worker:
         fw.write(str(Worker.id_counter))
 
         fw.close()
+
+    def get_similar_workers(self, file):
+        f = open(file, "r")
+        workers = []
+        gb =[]
+        for x in f:
+            worker = x.split("|")
+            if (self.wanted_job == worker[1]) or (self.wanted_job == worker[3]):
+                #print(worker[0], worker[1], worker[2], worker[3], worker[4])
+                #workers.append(Worker(worker[1], worker[2], worker[3], worker[4]))
+                gb =[worker[1], worker[2], worker[3], worker[4]]
+                break
+        f.close()
+        max_match = 0
+        if len(workers) > 0:
+            match_worker = workers[0]
+            for worker in workers:
+                curr_match = self.calculate_score(worker)
+                if max_match < curr_match:
+                    match_worker = worker
+                    max_match = curr_match
+        gb.append(max_match)
+        return gb
+
+    def calculate_score(self, worker):
+        score = 0
+        if self.current_job is worker.prev_job:
+            score = score + 4
+        if self.degree is worker.degree:
+            score = score + 3
+        if self.prev_job is worker.prev_job:
+            score = score + 2
+        return score

@@ -15,8 +15,9 @@ def index():
 def result():
     if request.method == 'POST':
         result = request.form
-        new_worker(result)
-        return render_template("result.html",result = result)
+        worker = new_worker(result)
+        print("IN GUI",worker)
+        return render_template("result.html",result = worker)
 
 if __name__ == "__main__":
     app.run()

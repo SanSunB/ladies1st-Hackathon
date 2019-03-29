@@ -1,13 +1,10 @@
 <!doctype html>
 <html>
    <body>
-      <table border = 1>
-         {% for key, value in result.items() %}
-            <tr>
-               <th> {{ key }} </th>
-               <td> {{ value }} </td>
-            </tr>
-         {% endfor %}
-      </table>
+   <h1> The best path</h1>
+      <p> wanted job : {{ result[0] }} </p>
+      <p> former job : {{ result[1] }} </p>
+      <p> degree : {{ result[3] }} </p>
+      <p> score : 7  </p>
    </body>
 </html>
