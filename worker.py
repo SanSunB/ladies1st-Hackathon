@@ -7,9 +7,14 @@ class Worker:
         """ """
         self.id_number = None
         self.current_job = None
-        self.job_history = None
+        self.prev_job = None
         self.degree = None
-        self.courses = None
+
+    def __init__(self,current_job, prev_job, degree):
+        self.id_number = self.create_id()
+        self.current_job = current_job
+        self.prev_job = prev_job
+        self.degree = degree
 
     def create_id(self):
         """ advance the worker id and keep it in teh file """

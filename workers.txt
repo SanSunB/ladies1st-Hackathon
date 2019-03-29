@@ -1,5 +1,5 @@
-id | current_job | industry | prev_job | industry| degree
-1 | python developer | None | + | computer Science|
-2 | project manager | health | + | None
+id | wanted_job | current_job | prev_job |  degree
+1 | python developer | None |  | computer Science|
+2 | project manager | health |  | None
 3 | UX | None | None | None | None |
 4 | QA | None | None | None | None |

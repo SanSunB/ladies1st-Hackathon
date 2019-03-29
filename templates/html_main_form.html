@@ -4,12 +4,12 @@
     <title>Flask Shop</title>
   </head>
   <body>
-    <h1>{{name}}</h1>
-    <form>
-      First name:<br>
-      <input type="text" name="firstname"><br>
-      Last name:<br>
-      <input type="text" name="lastname">
+    <form action = "http://localhost:5000/result" method = "POST">
+         <p> wanted job <input type = "text" name = "wanted_job" /></p>
+         <p>current job <input type = "text" name = "current_job" /></p>
+         <p>prev job <input type = "text" name = "previous_job" /></p>
+         <p>degree <input type ="text" name = "degree" /></p>
+         <p><input type = "submit" value = "submit" /></p>
     </form>
 
   </body>
