@@ -1,0 +1,43 @@
+{
+    "wanted_job":{
+        "job" : "None",
+        "industry" : "None"
+    },
+    "current_job":{
+        "job" : "python developer",
+        "industry" : "None",
+        "years": "3"
+    },
+    "previous_jobs" :[
+        {
+            "job" : "None",
+            "industry" : "None",
+            "years": "None"
+        },
+        {
+            "job" : "None",
+            "industry" : "None",
+            "years": "None"
+        }
+    ],
+    "degrees" : [
+        {
+            "subject" : "physics",
+            "place" : "open university"
+        },
+        {
+            "subject" : "None",
+            "place" : "None"
+        }
+    ],
+    "courses" : [
+        {
+            "name": "she codes - python",
+            "link": "None"
+        },
+        {
+            "name": "None",
+            "link": "None"
+        }
+    ]
+}

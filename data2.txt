@@ -1,0 +1,43 @@
+{
+    "wanted_job":{
+        "job" : "None",
+        "industry" : "None"
+    },
+    "current_job":{
+        "job" : "None",
+        "industry" : "None",
+        "years": "None"
+    },
+    "previous_jobs" :[
+        {
+            "job" : "None",
+            "industry" : "None",
+            "years": "None"
+        },
+        {
+            "job" : "None",
+            "industry" : "None",
+            "years": "None"
+        }
+    ],
+    "degrees" : [
+        {
+            "subject" : "None",
+            "place : "None"
+        },
+        {
+            "subject" : "None",
+            "place : "None"
+        }
+    }],
+    "courses" : [
+        {
+            "name": "None",
+            "link": "None"
+        },
+        {
+            "name": "None",
+            "link": "None"
+        }
+    ]
+}
