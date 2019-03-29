@@ -37,7 +37,7 @@ class Looker(Worker):
             score = score + 1
         return score
     
-        def get_similar_worker(self, file):
+        def get_similar_lookers(self, file):
         f = open(file, "r")
         lookers = []
         for x in f:
